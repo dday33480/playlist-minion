@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    font-family: "Quicksand";
+    color: #fff;
+    background-color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Homepage styling */
+
+.home {
+    display: grid;
+    margin: 5% 25%;
+}
+
+.header {
+    border: 2px solid #1B3D81;
+    padding: 2.5% 1%;
+}
+
+.footer {
+    border: 2px solid #1B3D81;
+    padding: 2% 1%;
+}
+
+.home h2 {
+    font-size: 300%;
+    margin: 8% 1%;
+}
+
+.home p {
+    font-size: 180%;
+    margin: 8% 1%;
+}
+
+#next-btn {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: 200;
+    background-color: #1B3D81;
+    border: 3px solid #1B3D81;
+    border-radius: 25%;
+    justify-items: center;
+    margin: 3% 30%;
+    padding: 2% 2%;;
+}
+
+/* Criteria page styling */
+
+.criteria-selection {
+    display: grid;
+    margin: 5% 25%;
+}
+
+.criteria-selection h2 {
+    font-size: 300%;
+    margin: 3% 1%;
+    border-bottom: 3px solid #1B3D81;
+    display: block;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.criteria-form {
+    margin: 6% 0%;
+    border: 3px solid #1B3D81;
+    padding: 1% 2%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    border: 3px solid #1B3D81;
+    background-color: lightgrey;
+    color: black;
+    font-weight: 500;
+    padding: 1% 1%;
+}
+
+/* Playlist name page styling*/
+
+.playlist-name {
+    display: grid;
+    margin: 5% 25%;
+}
+
+.playlist-name h2 {
+    font-size: 300%;
+    margin: 4% 1%;
+    border-bottom: 3px solid #1B3D81;
+    display: block;
+}
+
+.name-form {
+    margin-top: 8%;
+    margin-bottom: 10%;
+    border: 3px solid #1B3D81;
+    padding: 3% 2%;
+}
+
+/* Google login page styling */
+
+.google-login {
+    display: grid;
+    margin: 5% 25%;
+}
+
+.google-login h2 {
+    font-size: 300%;
+    margin: 4% 1%;
+    border-bottom: 3px solid #1B3D81;
+    display: block;
+}
+
+.google-login p {
+    margin-bottom: 5%;
+}
+
+.login-form {
+    margin: 6% 0%;
+    border: 3px solid #1B3D81;
+    padding: 1% 2%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    border: 3px solid #1B3D81;
+    background-color: lightgrey;
+    color: black;
+    font-weight: 500;
+    padding: 1% 1%;
+    margin-bottom: 3%;
 }
