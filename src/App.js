@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from './Home';
+import Header from './Header';
+import Footer from './Footer';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Criteria from './Criteria';
+import PlaylistName from './PlaylistName';
+import GoogleLogin from './GoogleLogin';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <div className="App">
+            <Header />
+            <header className="content">
+                <Switch>
+                    <Route exact path='/'>
+                        <Home />
+                    </Route>
+                    <Route path="/criteria">
+                        <Criteria />
+                    </Route>
+                    <Route path="/playlist-name">
+                        <PlaylistName />
+                    </Route>
+                    <Route path="/google-login">
+                        <GoogleLogin />
+                    </Route>
+                </Switch>
+            </header>
+            <Footer />
+        </div>
+    </Router>
   );
 }
 
