@@ -4,7 +4,7 @@ import Footer from './Footer';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Criteria from './Criteria';
 import PlaylistName from './PlaylistName';
-import GoogleLogin from './GoogleLogin';
+import GoogleUserLogin from './GoogleLogin';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
                         <PlaylistName />
                     </Route>
                     <Route path="/google-login">
-                        <GoogleLogin />
+                        <GoogleUserLogin />
                     </Route>
                 </Switch>
             </header>

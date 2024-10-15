@@ -1,27 +1,37 @@
 import { Link } from 'react-router-dom';
+import { GoogleLogin } from '@react-oauth/google';
+import {useGoogleLogin} from '@react-oauth/google';
 
-const GoogleLogin = () => {
+const GoogleUserLogin = () => {     
+    
+    /*const login = useGoogleLogin({
+        onSuccess: codeResponse => console.log(codeResponse),
+        flow: 'auth-code',
+    })*/
+
     return ( 
         <div className="google-login">
             <div>
                 <h2>Login to your Google Account</h2>
                 <p>Once you're logged in AI Minion will be able to generate and save your playlist within your YouTube account.</p>
             </div>
-            <div className="login-form">
-                <div className="form-group">
-                    <label>Email</label>
-                    <input type="email" required />
-                </div>
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" required />
+            <div>
+                <div className="google-login-btn">
+                    <GoogleLogin
+                        onSuccess = {credentialResponse => {
+                            console.log(credentialResponse);
+                           }}
+                        onFailure = {() => {
+                            console.log('Login failed');
+                        }}
+                           />
                 </div>
             </div>
             <div>
                 <Link to='/google-login' id="next-btn">Next</Link>
             </div>
         </div>
-     );
+     );                
 }
  
-export default GoogleLogin;
+export default GoogleUserLogin;
